@@ -61,7 +61,7 @@ public class CalculatorTest {
         assertThat(Calculator.calculatingDiscount(3300, 0)).isEqualTo(3300);
 //        проверяем утверждения, связанные с выбрасыванием ошибки
         // проверяем верхний предел скидки
-        assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, 5))
+        assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, 55))
                 .isInstanceOf(ArithmeticException.class).hasMessage("Скидка в диапазоне от 0 до 50%");
         // проверяем что скидка не может быть отрицательной
         assertThatThrownBy(() -> Calculator.calculatingDiscount(1000, -10))
